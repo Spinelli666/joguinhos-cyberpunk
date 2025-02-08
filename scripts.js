@@ -24,7 +24,7 @@ function checkPassword() {
     if (inputPass === correctPassword) {
         message.innerHTML = "<strong>Access Granted!</strong>";
         setTimeout(() => {
-            window.location.href = "success.html"; // Redireciona para a nova página após um pequeno atraso
+            window.location.href = "success.html";
         }, 1000);
     } else {
         attempts--;
@@ -39,5 +39,5 @@ function checkPassword() {
 }
 
 function redirectToSuccess() {
-    window.location.href = "success.html"; // Redireciona para a nova página
+    window.location.href = "success.html";
 }

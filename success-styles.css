@@ -1,0 +1,64 @@
+body {
+    background-color: #0d0d0d;
+    color: #0ff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    height: 100vh;
+    margin: 0;
+    padding: 0; 
+}
+
+.content {
+    display: none;
+    text-align: left; 
+    margin: 20px; 
+    color: #0ff; 
+    text-shadow: 0 0 10px #0ff; 
+}
+
+.active {
+    display: block;
+}
+
+header {
+    width: 100%; 
+    background-color: #0d0d0d; 
+    box-shadow: 0 0 20px #0ff; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; 
+    padding: 10px 20px; 
+    width: 100%; 
+}
+
+.navbar button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: rgba(0, 255, 255, 0.2);
+    color: #0ff; 
+    border: 2px solid #0ff; 
+    text-shadow: 0 0 10px #0ff; 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #0ff; 
+    color: #0d0d0d; 
+    box-shadow: 0 0 20px #0ff;
+}
+
+h2 {
+    text-shadow: 0 0 20px #0ff; 
+}
+
+p {
+    text-shadow: 0 0 10px #0ff; 
+}
