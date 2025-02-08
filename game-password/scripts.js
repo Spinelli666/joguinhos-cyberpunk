@@ -23,6 +23,9 @@ function checkPassword() {
 
     if (inputPass === correctPassword) {
         message.innerHTML = "<strong>Access Granted!</strong>";
+        setTimeout(() => {
+            window.location.href = "success.html"; // Redireciona para a nova página após um pequeno atraso
+        }, 1000);
     } else {
         attempts--;
         if (attempts > 0) {
@@ -35,6 +38,6 @@ function checkPassword() {
     clearPassword();
 }
 
-function grantAccess() {
-    document.getElementById("message").innerHTML = "<strong>Access Granted!</strong>";
+function redirectToSuccess() {
+    window.location.href = "success.html"; // Redireciona para a nova página
 }
