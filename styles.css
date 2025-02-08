@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    background-color: #0d0d0d;
+    color: #0ff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.num-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 2rem;
+}
+.num-button, .num-acess {
+    font-size: 24px;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 255, 255, 0.2);
+    color: #0ff;
+    border: 2px solid #0ff;
+    cursor: pointer;
+    text-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+}
+.num-button:hover, .num-acess:hover {
+    background: #0ff;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #0ff;
+}
+.num-acess {
+    width: 260px;
+}
+input {
+    font-size: 24px;
+    padding: 10px;
+    background: black;
+    color: #0ff;
+    border: 2px solid #0ff;
+    text-align: center;
+    width: 220px;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #0ff;
+}
+button {
+    font-size: 24px;
+    background: #0ff;
+    color: black;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 10px #0ff;
+}
+h1 {
+    text-shadow: 0 0 20px #0ff;
+}
