@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janelinha de Hack</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        
+        body {
+            background-color: #0d0d0d;
+            color: #0ff;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .num-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 2rem;
+        }
+        .num-button, .num-acess {
+            font-size: 24px;
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 255, 255, 0.2);
+            color: #0ff;
+            border: 2px solid #0ff;
+            cursor: pointer;
+            text-shadow: 0 0 10px #0ff;
+            transition: 0.3s;
+        }
+        .num-button:hover, .num-acess:hover {
+            background: #0ff;
+            color: #0d0d0d;
+            box-shadow: 0 0 20px #0ff;
+        }
+        .num-acess {
+            width: 260px;
+        }
+        input {
+            font-size: 24px;
+            padding: 10px;
+            background: black;
+            color: #0ff;
+            border: 2px solid #0ff;
+            text-align: center;
+            width: 220px;
+            margin-top: 10px;
+            text-shadow: 0 0 10px #0ff;
+        }
+        button {
+            font-size: 24px;
+            background: #0ff;
+            color: black;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 0 10px #0ff;
+        }
+        h1 {
+            text-shadow: 0 0 20px #0ff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hack the System</h1>
+        <p>Enter the 6-di<span class="hack-word" onclick="grantAccess()">g</span>it password.</p>
+        <div class="num-pad">
+            <button class="num-button" onclick="enterDigit(1)">1</button>
+            <button class="num-button" onclick="enterDigit(2)">2</button>
+            <button class="num-button" onclick="enterDigit(3)">3</button>
+            <button class="num-button" onclick="enterDigit(4)">4</button>
+            <button class="num-button" onclick="enterDigit(5)">5</button>
+            <button class="num-button" onclick="enterDigit(6)">6</button>
+            <button class="num-button" onclick="enterDigit(7)">7</button>
+            <button class="num-button" onclick="enterDigit(8)">8</button>
+            <button class="num-button" onclick="enterDigit(9)">9</button>
+            <button class="num-button" onclick="clearPassword()">C</button>
+            <button class="num-button" onclick="enterDigit(0)">0</button>
+            <button class="num-button" onclick="deleteLastDigit()">Del</button>
+            <button class="num-acess" onclick="checkPassword()">Access</button>
+        </div>
+        <input type="text" id="password" maxlength="6" readonly>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        let correctPassword = "366459";
+        let attempts = 3;
+        
+        function enterDigit(digit) {
+            let inputField = document.getElementById("password");
+            if (inputField.value.length < 6) {
+                inputField.value += digit;
+            }
+        }
+        
+        function clearPassword() {
+            document.getElementById("password").value = "";
+        }
+        
+        function deleteLastDigit() {
+            let inputField = document.getElementById("password");
+            inputField.value = inputField.value.slice(0, -1);
+        }
+        
+        function checkPassword() {
+            let inputPass = document.getElementById("password").value;
+            let message = document.getElementById("message");
+            
+            if (inputPass === correctPassword) {
+                message.innerHTML = "<strong>Access Granted!</strong>";
+            } else {
+                attempts--;
+                if (attempts > 0) {
+                    message.innerHTML = `Access Denied! ${attempts} attempts left.`;
+                } else {
+                    message.innerHTML = "Access blocked!";
+                    document.querySelectorAll('.num-button').forEach(button => button.disabled = true);
+                }
+            }
+        }
+        
+        function grantAccess() {
+            document.getElementById("message").innerHTML = "<strong>Access Granted!</strong>";
+        }
+    </script>
+</body>
+</html>
