@@ -1,4 +1,4 @@
-let correctPassword = "366459";
+let correctPassword = "000000";
 let attempts = 3;
 
 function enterDigit(digit) {
@@ -36,8 +36,4 @@ function checkPassword() {
         }
     }
     clearPassword();
-}
-
-function redirectToSuccess() {
-    window.location.href = "success.html";
 }

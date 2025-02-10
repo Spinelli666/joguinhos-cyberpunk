@@ -1,0 +1,63 @@
+body {
+    background-color: #0d0d0d;
+    color: #0ff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center; 
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%; 
+    background-color: #0d0d0d; 
+    box-shadow: 0 0 20px #0ff; 
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+main {
+    margin-top: 150px;
+}
+
+h1 {
+    font-size: 48px;
+    text-shadow: 0 0 20px #0ff; 
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    text-shadow: 0 0 10px #0ff; 
+    margin: 10px 0 0 0;
+    padding-bottom: 10px; /* Espaçamento abaixo do texto */
+    border-bottom: 2px solid #0ff; /* Borda inferior */
+}
+
+button.voltar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 255, 255, 0.2);
+    color: #0ff;
+    border: 2px solid #0ff;
+    text-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+}
+
+button.voltar:hover {
+    background-color: #0ff;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #0ff;
+}
