@@ -2,7 +2,6 @@ body {
     background-color: #0d0d0d;
     color: #0ff;
     font-family: 'Orbitron', sans-serif;
-    text-align: center; 
     margin: 0;
     padding: 0; 
     display: flex;
@@ -26,6 +25,11 @@ main {
     margin-top: 150px;
 }
 
+article {
+    padding: 0 20px; /* Adiciona espaçamento lateral */
+    max-width: 800px; /* Limita a largura máxima do conteúdo */
+}
+
 h1 {
     font-size: 48px;
     text-shadow: 0 0 20px #0ff; 
@@ -33,6 +37,7 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     font-size: 24px;
     text-shadow: 0 0 10px #0ff; 
     margin: 10px 0 0 0;
