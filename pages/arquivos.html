@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucesso</title>
+    <title>Arquivos</title>
     <link rel="stylesheet" href="../css/arquivos.css">
 </head>
 <body>
     <header>
         <h1>ARQUIVOS</h1>
-        <button class="voltar" onclick="window.location.href='/index.html'">VOLTAR</button>
+        <button id="voltar" class="voltar">VOLTAR</button>
     </header>
     <main>
         <h2>MISSÃO</h2>
@@ -71,6 +71,10 @@
     <script>
         document.getElementById('objetivoMissao').addEventListener('click', function() {
             window.location.href = 'secretArquivo.html';
+        });
+
+        document.getElementById('voltar').addEventListener('click', function() {
+            window.location.href = '/index.html';
         });
     </script>
 </body>
