@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Convidados - Festa de Victor Langley</title>
+    <link rel="stylesheet" href="../css/dados.css">
+</head>
+<body>
+
+    <h1>Dados Extraídos: Lista da Festa de Victor Langley</h1>
+
+    <div class="edit-container">
+        <h2>Editar Convidado</h2>
+        <form id="editForm">
+            <label for="editId">ID:</label>
+            <input type="number" id="editId" name="editId"><br><br>
+            <label for="editNome">Nome:</label>
+            <input type="text" id="editNome" name="editNome"><br><br>
+            <label for="editCargo">Cargo:</label>
+            <input type="text" id="editCargo" name="editCargo"><br><br>
+            <button type="button" onclick="addEdit()">Adicionar Alteração</button>
+            <button type="button" onclick="confirmEdit()">Confirmar Alterações</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Status de Presença</th>
+            </tr>
+        </thead>
+        <tbody id="guestList">
+            <!-- Os dados serão inseridos aqui via JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="../js/dados.js"></script>
+
+</body>
+</html>

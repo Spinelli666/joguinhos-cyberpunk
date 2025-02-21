@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregando...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .loading-container {
+            width: 300px;
+            text-align: center;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #00ffcc, #0066ff);
+            transition: width 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <h1>Carregando...</h1>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    <script>
+        let progress = document.getElementById("progress");
+        let width = 0;
+        let duration = 5000; 
+        // let duration = 180000; // 3 minutos em milissegundos
+        let intervalTime = duration / 100; // Tempo por cada incremento
+        
+        function load() {
+            if (width >= 100) {
+                clearInterval(interval);
+                document.body.innerHTML = "<h1>Carregamento Completo!</h1>";
+                // Redireciona de volta para a tela de lista após o carregamento
+                setTimeout(() => {
+                    window.location.href = "dados.html";
+                }, 1000);
+            } else {
+                width += 1;
+                progress.style.width = width + "%";
+            }
+        }
+        
+        let interval = setInterval(load, intervalTime);
+    </script>
+</body>
+</html>
