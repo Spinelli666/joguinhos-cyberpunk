@@ -1,4 +1,5 @@
 let correctPassword = "000000";
+let specialPassword = "659723";
 let attempts = 3;
 
 function enterDigit(digit) {
@@ -25,6 +26,11 @@ function checkPassword() {
         message.innerHTML = "<strong>Access Granted!</strong>";
         setTimeout(() => {
             window.location.href = "success.html";
+        }, 1000);
+    } else if (inputPass === specialPassword) {
+        message.innerHTML = "<strong>Access Granted!</strong>";
+        setTimeout(() => {
+            window.location.href = "dados.html";
         }, 1000);
     } else {
         attempts--;

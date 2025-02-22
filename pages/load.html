@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carregando...</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #111;
-            color: #fff;
-            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #0ff;
+            font-family: 'Orbitron', sans-serif;
             flex-direction: column;
+            text-align: center;
         }
         .loading-container {
             width: 300px;
@@ -23,15 +26,21 @@
             width: 100%;
             height: 20px;
             background-color: #333;
-            border-radius: 10px;
+            border-radius: 5px;
             overflow: hidden;
             margin-top: 10px;
+            box-shadow: 0 0 20px #0ff;
         }
         .progress {
             height: 100%;
             width: 0;
-            background: linear-gradient(90deg, #00ffcc, #0066ff);
+            background: #0ff;
             transition: width 0.2s;
+            box-shadow: 0 0 20px #00ffcc;
+        }
+        h1 {
+            color: #0ff;
+            text-shadow: 0 0 20px #0ff;
         }
     </style>
 </head>
@@ -45,15 +54,13 @@
     <script>
         let progress = document.getElementById("progress");
         let width = 0;
-        let duration = 5000; 
-        // let duration = 180000; // 3 minutos em milissegundos
-        let intervalTime = duration / 100; // Tempo por cada incremento
+        let duration = 60000;
+        let intervalTime = duration / 100; 
         
         function load() {
             if (width >= 100) {
                 clearInterval(interval);
                 document.body.innerHTML = "<h1>Carregamento Completo!</h1>";
-                // Redireciona de volta para a tela de lista após o carregamento
                 setTimeout(() => {
                     window.location.href = "dados.html";
                 }, 1000);

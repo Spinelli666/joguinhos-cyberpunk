@@ -9,9 +9,73 @@ body {
 h1 {
     color: #0ff;
     text-shadow: 0 0 20px #0ff;
-    border-bottom: 2px solid #0ff; /* Adiciona uma borda embaixo */
-    padding-bottom: 10px; /* Adiciona espaçamento abaixo do texto */
+    border-bottom: 2px solid #0ff; 
+    padding-bottom: 10px; 
     margin-bottom: 3rem;
+}
+
+.edit-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff;
+    text-align: center; 
+    width: 50%;
+    margin: 0 auto 60px auto; 
+}
+
+.edit-container h2 {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    margin-bottom: 20px;
+}
+
+.edit-container label {
+    display: inline-block;
+    width: 9%;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+    vertical-align: super; 
+    text-align: right; 
+    margin-right: 10px; 
+}
+
+.edit-container input {
+    width: 60%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    background-color: #0d0d0d;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+    box-shadow: 0 0 10px #0ff inset;
+    font-family: 'Orbitron', sans-serif;
+    vertical-align: middle; 
+}
+
+.edit-container input:focus {
+    outline: none;
+    box-shadow: 0 0 20px #0ff inset;
+}
+
+.edit-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: rgba(0, 255, 255, 0.2);
+    border: 2px solid #0ff;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.edit-container button:hover {
+    background-color: #0ff;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #0ff;
 }
 
 table {

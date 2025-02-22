@@ -26,8 +26,8 @@ main {
 }
 
 article {
-    padding: 0 20px; /* Adiciona espaçamento lateral */
-    max-width: 800px; /* Limita a largura máxima do conteúdo */
+    padding: 0 20px; 
+    max-width: 800px;
 }
 
 h1 {
@@ -41,8 +41,8 @@ h2 {
     font-size: 24px;
     text-shadow: 0 0 10px #0ff; 
     margin: 10px 0 0 0;
-    padding-bottom: 10px; /* Espaçamento abaixo do texto */
-    border-bottom: 2px solid #0ff; /* Borda inferior */
+    padding-bottom: 10px; 
+    border-bottom: 2px solid #0ff; 
 }
 
 button.voltar {

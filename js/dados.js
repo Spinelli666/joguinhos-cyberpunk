@@ -1,5 +1,4 @@
 const convidados = [
-    // FUNCIONÁRIOS (66 pessoas)
     { id: 312, nome: "Carlos Mendes", cargo: "Chefe de Segurança", status: "Presente" },
     { id: 421, nome: "Roberto Tancredi", cargo: "Chefe de Segurança Interna", status: "Presente" },
     { id: 198, nome: "Marco Oliveira", cargo: "Segurança Particular", status: "Presente" },
@@ -35,9 +34,7 @@ const convidados = [
     { id: 358, nome: "Natasha Oliveira", cargo: "Garçonete", status: "Presente" },
     { id: 266, nome: "Felipe Costa", cargo: "DJ Principal", status: "Presente" },
     { id: 499, nome: "Igor Matos", cargo: "Técnico de Som", status: "Presente" },
-    // +41 funcionários fictícios adicionados...
 
-    // CONVIDADOS (100 pessoas)
     { id: 523, nome: "Victor Langley", cargo: "Anfitrião da Festa", status: "Presente" },
     { id: 547, nome: "Leonard Vasquez", cargo: "CEO da Biotech", status: "Presente" },
     { id: 576, nome: "Sophia Ramírez", cargo: "Executiva da Quantum Synergy", status: "Presente" },
@@ -68,7 +65,6 @@ const convidados = [
     { id: 604, nome: "Helena Cruz", cargo: "Jornalista Investigativa", status: "Presente" },
     { id: 526, nome: "Isaac Moreira", cargo: "Especialista em IA", status: "Presente" },
     { id: 673, nome: "Rafael Monteiro", cargo: "Atriz Convidada", status: "Presente" },
-    // +80 convidados fictícios adicionados...
 ];
 
 let pendingEdits = [];
@@ -97,19 +93,18 @@ function addEdit() {
 
     pendingEdits.push({ id: editId, nome: editNome, cargo: editCargo });
 
-    // Limpa os campos do formulário
     document.getElementById("editForm").reset();
 }
 
 function confirmEdit() {
-    // Armazena as alterações no localStorage
+
     localStorage.setItem('pendingEdits', JSON.stringify(pendingEdits));
 
-    // Redireciona para a tela de carregamento
+
     window.location.href = "load.html";
 }
 
-// Função para aplicar as alterações após o carregamento
+
 function applyEdits() {
     const storedEdits = JSON.parse(localStorage.getItem('pendingEdits'));
 
@@ -127,14 +122,13 @@ function applyEdits() {
             });
         });
 
-        // Limpa os dados do localStorage
+
         localStorage.removeItem('pendingEdits');
     }
 
     renderTable();
 }
 
-// Aplica as edições se houverem
 applyEdits();
 
 renderTable();
