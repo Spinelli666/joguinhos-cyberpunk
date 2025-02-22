@@ -40,6 +40,7 @@ const convidados = [
     { id: 576, nome: "Sophia Ramírez", cargo: "Executiva da Quantum Synergy", status: "Presente" },
     { id: 590, nome: "Diana Ishikawa", cargo: "Cantora Convidada", status: "Presente" },
     { id: 501, nome: "Julian Pierce", cargo: "Empresário", status: "Presente" },
+    { id: 505, nome: "Ramiro Ortega", cargo: "Delegado", status: "Presente" },
     { id: 653, nome: "Isabela Fontes", cargo: "Mídia Independente", status: "Presente" },
     { id: 512, nome: "Nathan Lee", cargo: "Advogado Corporativo", status: "Presente" },
     { id: 624, nome: "Amanda Becker", cargo: "Consultora de Segurança", status: "Presente" },
