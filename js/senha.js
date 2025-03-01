@@ -1,5 +1,5 @@
 let correctPassword = "000000";
-let specialPassword = "659723";
+let specialPassword = "111111";
 let attempts = 3;
 
 function enterDigit(digit) {
